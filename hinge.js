@@ -13,7 +13,7 @@ function main(){
 			.translate([0, 0, 2*(hingeRadius+hingeMargin+baseplateDepth)])
 	);*/
 	
-	return buildBaseplate();
+	return buildRoundPlate();
 }
 
 function buildRoundPlate(){
@@ -67,7 +67,7 @@ function buildRoundPlate(){
 		,hingeBase
 	)
 	
-	var nut = cylinder({r: 9.2/2, h: 3.5, fn: 6});
+	var nut = cylinder({r: 9.2/2, h: 3.5, fn: 6}).rotateZ(30);
 	
 	var hingeScrew = union(
 		 screwHead.translate([0, 0, hingeWidth - screwConeHeight])
